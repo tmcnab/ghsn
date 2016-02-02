@@ -1,11 +1,16 @@
 {
-  "bugs": { "url": "https://github.com/tmcnab/ghsn/issues" },
+  "bugs": {
+    "url": "https://github.com/tmcnab/ghsn/issues"
+  },
   "contributors": [
-      "Tristan McNab <tristan.j.mcnab@gmail.com> (http://neuromancer.io/)"
+    "Tristan McNab <tristan.j.mcnab@gmail.com> (http://neuromancer.io/)"
   ],
   "description": "Github Social Network",
-  "homepage": "https://github.com/tmcnab/ghsn#readme",
-  "keywords": ["Github", "Social Network"],
+  "homepage": "https://ghsn.io",
+  "keywords": [
+    "Github",
+    "Social Network"
+  ],
   "license": "ISC",
   "name": "ghsn",
   "repository": {
@@ -13,7 +18,23 @@
     "url": "git+ssh://git@github.com/tmcnab/ghsn.git"
   },
   "scripts": {
-    "test": "mocha"
+    "bundle": "scripts/bundle",
+    "develop": "nodemon --ignore ./build -x 'npm run-script bundle && http-server -p 8080 ./build'",
+    "test": "scripts/test"
   },
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "dependencies": {
+    "milligram": "^1.1.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.0-rc5"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "eslint": "^1.10.3",
+    "http-server": "^0.8.5"
+  }
 }

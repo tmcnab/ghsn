@@ -1,0 +1,6 @@
+rm -rf ./buildc
+mkdir -p ./build
+cp ./node_modules/milligram/dist/milligram.min.css ./build/milligram.css
+cp ./node_modules/milligram/dist/milligram.min.css.map ./build/milligram.min.css.map
+cp ./index.html build
+browserify ./index.js -t babelify --debug --outfile ./build/index.js

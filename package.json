@@ -19,11 +19,12 @@
   },
   "scripts": {
     "bundle": "scripts/bundle",
-    "develop": "nodemon --ignore ./build -x 'npm run-script bundle && http-server -p 8080 ./build'",
+    "develop": "nodemon -e js,html --ignore ./build -x 'npm run-script bundle && http-server -p 8080 ./build'",
     "test": "scripts/test"
   },
   "version": "0.1.0",
   "dependencies": {
+    "github": "^0.2.4",
     "milligram": "^1.1.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",

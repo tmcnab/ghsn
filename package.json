@@ -1,0 +1,19 @@
+{
+  "bugs": { "url": "https://github.com/tmcnab/ghsn/issues" },
+  "contributors": [
+      "Tristan McNab <tristan.j.mcnab@gmail.com> (http://neuromancer.io/)"
+  ],
+  "description": "Github Social Network",
+  "homepage": "https://github.com/tmcnab/ghsn#readme",
+  "keywords": ["Github", "Social Network"],
+  "license": "ISC",
+  "name": "ghsn",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tmcnab/ghsn.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "0.1.0"
+}

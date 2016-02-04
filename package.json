@@ -19,7 +19,7 @@
   },
   "scripts": {
     "bundle": "scripts/bundle",
-    "develop": "nodemon -e js,html --ignore ./build -x 'npm run-script bundle && http-server -p 8080 ./build'",
+    "develop": "nodemon -q -e js,html --ignore build -x 'npm run-script bundle && http-server -p 8080 ./build'",
     "test": "scripts/test"
   },
   "version": "0.1.0",

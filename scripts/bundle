@@ -1,10 +1,12 @@
+# Setup our build directory
 rm -rf ./build
 mkdir -p ./build
 
-
+# Copy static assets across to build directory.
 cp ./node_modules/milligram/dist/milligram.min.css ./build/milligram.css
 cp ./node_modules/milligram/dist/milligram.min.css.map ./build/milligram.min.css.map
 cp ./index.html build
 cp -R ./assets/typicons.font/src/font ./build/typeicons.font
 
-browserify ./index.js -t babelify --debug --outfile ./build/index.js
+# Bundle up the node+react source into a browser script.
+browserify ./source/index.js -t babelify --debug --outfile ./build/index.js
